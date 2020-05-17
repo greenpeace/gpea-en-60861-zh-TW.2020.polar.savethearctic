@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "homepage": "localhost",
+  "name": "zh-hk.2020.polar.savethearctic.general.signup.na",
+  "homepage": "https://change.greenpeace.org.tw/2020/petition/zh-hk.2020.polar.savethearctic/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:en": "PUBLIC_URL=https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.climate.vote react-scripts build",
+    "build:en": "PUBLIC_URL=https://change.greenpeace.org.tw/2020/petition/zh-hk.2020.polar.savethearctic react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "yarn run build:en && gpea-npm-en-uploader"
