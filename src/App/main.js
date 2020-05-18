@@ -1,9 +1,11 @@
 const {$, anime, autosize, Cookies, Highcharts, dataLayer} = window
 
-const donateUrl = "https://act.greenpeace.org/page/4723/donate/1?utm_campaign=2020-dwf&ref=2020-dwf_thankyoupage_donation_btn";
-const shareUrl = "https://act.greenpeace.org/page/60863/petition/1";
-const shareFBUrl = "https://act.greenpeace.org/page/60863/petition/1";
-const shareLineUrl = "https://act.greenpeace.org/page/60863/petition/1";
+const donateUrl = "https://act.greenpeace.org/page/4663/donate/1?campaign=polar&ref=savethearctic";
+const shareUrl = "https://act.gp/2zJgXKO";
+const shareFBUrl = "https://act.gp/2WII1mu";
+// const shareLineUrl = "https://act.greenpeace.org/page/60863/petition/1";
+
+const thankYouPageRedirect = "https://act.greenpeace.org/page/4723/donate/1?campaign=polar&utm_campaign=2020-arctic&utm_source=savethearctic.org&utm_medium=referral&utm_content=petition_thankyou_page";
 
 window.donate = () => {
 	window.open(
@@ -11,8 +13,9 @@ window.donate = () => {
         "_blank"
     );
 }
-window.share = () => {
+const sharePage = () => {
 
+    console.log(navigator.share)
 	if (navigator.share) {
 		// we can use web share!
 		navigator
@@ -24,7 +27,7 @@ window.share = () => {
 			.then(() => console.log("Successfully shared"))
 			.catch(error => console.log("Error sharing:", error));
 	} else {
-		
+        
 		var baseURL = "https://www.facebook.com/sharer/sharer.php";
 		
 		console.log('open', baseURL + "?u=" + encodeURIComponent(shareFBUrl))
@@ -34,6 +37,11 @@ window.share = () => {
 		);
 	}
 }
+
+$('#share_btn').click(function () {
+    sharePage();
+})
+// console.log(window.share)
 
 var pageInit = function(){
     console.log('init')
@@ -57,7 +65,7 @@ var pageInit = function(){
 
     // create the year options
     let currYear = new Date().getFullYear()
-    for (var i = 0; i < 80; i++) {
+    for (var i = 0; i < 120; i++) {
         
         let option = `<option value="01/01/${currYear-i}">${currYear-i}</option>`
         $("#center_yearofbirth").append(option);
@@ -128,6 +136,8 @@ var pageInit = function(){
             $("form.en__component--page").submit();
             console.log("submit success")
 
+            window.location.href = thankYouPageRedirect;
+
         },
         invalidHandler: function(event, validator) {
             // 'this' refers to the form
@@ -160,29 +170,15 @@ const resolveEnPagePetitionStatus = () => {
 $(function(){
 
     const EN_PAGE_STATUS = resolveEnPagePetitionStatus()
-	console.log("EN_PAGE_STATUS", EN_PAGE_STATUS)
+    console.log("EN_PAGE_STATUS", EN_PAGE_STATUS)
+    
 	if (EN_PAGE_STATUS==="FRESH") {
-	// if (false) {
         pageInit();
         $("#page-2").hide();
-		// if($('#voting').length == 1){
-			
-		// }
-
-		// setTimeout(function(){
-		// 	scrollTo(0,0);
-		// 	if($('#intro').length == 1) introPage.init();
-		// }, 400);
-
-		// $(window).resize(function(){
-		// 	if(introPage.active) introPage.resize();
-		// });
 	} else if (EN_PAGE_STATUS==="SUCC") {
-	// } else if (true) {
-		// pageHandler.goTo('#result', '#intro');
-        // resultPage.init();
+        window.location.href = thankYouPageRedirect;
         $('#page-1').hide();
-        $('#page-2').show();
+        // $('#page-2').show();
         console.log("go to thank you page")
 	}
 })

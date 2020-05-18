@@ -2290,6 +2290,12 @@ select {
     display: inline;
 }
 
+@media (max-width: 767px) {
+    .menu .menu_container .container_left {
+        width: 100% !important;
+    }
+}
+
 /* line 711, /Users/lattecreative/RubymineProjects/GreenPeace-SavetheArctic/source/css/partials/_320grid.sass */
 .menu .menu_container .container_left ul.submenu {
     display: none;
