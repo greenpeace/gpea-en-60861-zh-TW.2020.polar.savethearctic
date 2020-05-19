@@ -31,7 +31,7 @@ module.exports = {
 	},
 
 	enThankYouEmail: {
-		"execute": false,
+		"execute": true,
 		"enPageId": enPageId,
 		"mailPath": "email.html", // EDIT_HERE: the path to your email template
 	}

@@ -5,7 +5,7 @@ const shareUrl = "https://act.gp/2zJgXKO";
 const shareFBUrl = "https://act.gp/2WII1mu";
 // const shareLineUrl = "https://act.greenpeace.org/page/60863/petition/1";
 
-const thankYouPageRedirect = "https://act.greenpeace.org/page/4723/donate/1?campaign=polar&utm_campaign=2020-arctic&utm_source=savethearctic.org&utm_medium=referral&utm_content=petition_thankyou_page";
+const thankYouPageRedirect = "https://act.greenpeace.org/page/4663/donate/1?campaign=polar&ref=savethearctic_thankyou_page";
 
 window.donate = () => {
 	window.open(
@@ -135,6 +135,21 @@ var pageInit = function(){
             console.log($("form.en__component--page").serialize());
             $("form.en__component--page").submit();
             console.log("submit success")
+            // tracking conversion
+            window.dataLayer = window.dataLayer || [];
+            //
+            dataLayer.push({
+                'event': 'gaEvent',
+                'eventCategory': 'petitions',
+                'eventAction': 'signup',
+                'eventLabel': '2020-savethearctic',
+                'eventValue': undefined
+            });
+            dataLayer.push({
+                'event': 'fbqEvent',
+                'contentName': '2020-savethearctic',
+                'contentCategory': 'Petition Signup'
+            });
 
             window.location.href = thankYouPageRedirect;
 
