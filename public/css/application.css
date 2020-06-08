@@ -2280,7 +2280,9 @@ select {
     position: relative !important;
     display: block;
     height: 62px;
-    background: rgba(54, 119, 212, 0.9);
+    /* background: rgba(54, 119, 212, 0.9); */
+    background: rgba(20, 68, 135, 0.9);
+    
 }
 
 /* line 708, /Users/lattecreative/RubymineProjects/GreenPeace-SavetheArctic/source/css/partials/_320grid.sass */
