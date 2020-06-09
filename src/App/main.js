@@ -1,9 +1,9 @@
 const {$, anime, autosize, Cookies, Highcharts, dataLayer} = window
 
 const donateUrl = "https://act.greenpeace.org/page/4723/donate/1?campaign=polar&ref=savethearctic_thankyou_page";
-const shareUrl = "https://act.greenpeace.org/page/60861/petition/1";
-const shareFBUrl = "https://act.greenpeace.org/page/60861/petition/1";
-const shareLineUrl = "https://act.greenpeace.org/page/60861/petition/1";
+const shareUrl = "https://act.greenpeace.org/page/62053/petition/1";
+const shareFBUrl = "https://act.greenpeace.org/page/62053/petition/1";
+const shareLineUrl = "https://act.greenpeace.org/page/62053/petition/1";
 const redirectDonateLink = "https://act.greenpeace.org/page/4723/donate/1?campaign=polar&ref=savethearctic_thankyou_page"
 
 window.donate = () => {
@@ -79,19 +79,19 @@ var pageInit = function(){
             
             const phoneReg1 = new RegExp(/0\d{1,2}-\d{6,8}$/).test(value);
             const phoneReg2 = new RegExp(/0\d{1,2}\d{6,8}$/).test(value);
-            const phoneReg3 = new RegExp(/((?=(09))[0-9]{10})$/).test(value);
-            const phoneReg4 = new RegExp(/((?=(886))[0-9]{12,13})$/).test(value);
-            // const phoneReg5 = new RegExp(/((?=(886))[0-9]{11,13})$/).test(value);
+            const phoneReg3 = new RegExp(/((?=(09))[0-9]{9,11})$/).test(value);
+            const phoneReg4 = new RegExp(/((?=(886))[0-9]{11,13})$/).test(value);
+            const phoneReg5 = new RegExp(/(886\d{1,2}-\d{6,8})$/).test(value);
             
-            console.log(value)
-            console.log(phoneReg1)
-            console.log(phoneReg2)
-            console.log(phoneReg3)
-            console.log(phoneReg4)
+            // console.log(value)
+            // console.log(phoneReg1)
+            // console.log(phoneReg2)
+            // console.log(phoneReg3)
+            // console.log(phoneReg4)
             // console.log(phoneReg5)
 
             if ($('#center_phone').val()) {
-                return (phoneReg1 || phoneReg2 || phoneReg3 || phoneReg4)
+                return (phoneReg1 || phoneReg2 || phoneReg3 || phoneReg4 || phoneReg5)
             }
             console.log('phone testing')
             return true
@@ -131,11 +131,11 @@ var pageInit = function(){
                 'eventValue': undefined
             });
 
-            dataLayer.push({
-                'event': 'fbqEvent',
-                'contentName': '2020-savethearctic',
-                'contentCategory': 'Petition Signup'
-            });
+            // dataLayer.push({
+            //     'event': 'fbqEvent',
+            //     'contentName': '2020-savethearctic',
+            //     'contentCategory': 'Petition Signup'
+            // });
 
             $("form.en__component--page").submit();
         },
@@ -179,8 +179,8 @@ $(function(){
 	} else if (EN_PAGE_STATUS==="SUCC") {
         
         $('#page-1').hide();
-        // $('#page-2').show();
-        window.location.href = redirectDonateLink;
+        $('#page-2').show();
+        // window.location.href = redirectDonateLink;
         console.log("go to thank you page")
 
 	}

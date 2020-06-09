@@ -5,14 +5,6 @@
 <html class='no-js' lang='zh-TW' xmlns:fb='http://ogp.me/ns/fb#'>
 
 <head>
-
-	<script>
-		dataLayer = [{
-			'page-type': 'savethearctic',
-			'country': 'zh-TW',
-			'context': ''
-		}];
-	</script>
 	<!-- Google Tag Manager -->
 	<script>
 		(function (w, d, s, l, i) {
@@ -67,10 +59,10 @@
 	<!-- For everything else -->
 	<link href='/favicon.png' rel='shortcut icon' type='image/png'>
 	<link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
-	<link rel="stylesheet" href="%PUBLIC_URL%/css/app.css">
-	<link rel="stylesheet" href="%PUBLIC_URL%/css/application.css">
-	<link rel="stylesheet" href="%PUBLIC_URL%/css/jquery-ui.min.css">
-	<link rel="stylesheet" href="%PUBLIC_URL%/css/flexslider.css">
+	<link rel="stylesheet" href="%PUBLIC_URL%/css/app.css?v=12345">
+	<link rel="stylesheet" href="%PUBLIC_URL%/css/application.css?v=12345">
+	<link rel="stylesheet" href="%PUBLIC_URL%/css/jquery-ui.min.css?v=12345">
+	<link rel="stylesheet" href="%PUBLIC_URL%/css/flexslider.css?v=12345">
 
 
 	<title>救氣候，阻止北極破壞！ - Greenpeace 綠色和平 | 台灣</title>
@@ -581,11 +573,11 @@
 					經過三年不懈的努力、超過700萬人揭露SHELL的野心；九月底，石油公司SHELL終於止步北極！現在，讓我們進一步確保所有石油公司永不復返。</p>
 				<p>「守護北極」全球行動已經創下歷史，但為了永久保護北極，仍很需要您的關注和參與。現在，我們正推動將北極周邊的水域納入全球保護區，防止大型工業化捕撈船隊或鑽油船隊的破壞。相信您也願意一起改變世界！就讓我們從地球最北端的北極開始。
 				</p>
-				<button class="btn donate_btn" href="javascript:window.donate();">
+				<!-- <button class="btn donate_btn" href="javascript:window.donate();">
 					支持我們
-				</button>
+				</button> -->
 				<p>敬邀您為北極募集更多群眾力量，和我們一起為守護海洋盡力，請分享訊息讓更多人看見。</p>
-				<button class="btn fb_btn" href="javascript:window.share();">
+				<button class="btn fb_btn" onclick="window.share()">
 					分享
 				</button>
 				<!-- <button class="btn line_btn" href="javascript:window.shareLine();">
@@ -688,27 +680,27 @@
 	</form>
 	<!--EN_FORM_ENDS-->
 	
-	<script src="%PUBLIC_URL%/vendor/jquery-1.9.1.min.js"></script>
+	<script src="%PUBLIC_URL%/vendor/jquery-1.9.1.min.js?v=12345"></script>
 	<!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
-	<script src="%PUBLIC_URL%/vendor/jquery-ui-1.10.4.min.js"></script>
+	<script src="%PUBLIC_URL%/vendor/jquery-ui-1.10.4.min.js?v=12345"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
-	<script src="%PUBLIC_URL%/vendor/modernizr.min.js"></script>
+	<script src="%PUBLIC_URL%/vendor/modernizr.min.js?v=12345"></script>
 
 	<!-- <script src="%PUBLIC_URL%/js/index_plugins.js"></script> -->
 	<!-- <script src="/assets/js/index_plugins.js?1570538649"></script> -->
 
-	<script src="%PUBLIC_URL%/js/site.js"></script>
+	<script src="%PUBLIC_URL%/js/site.js?v=12345"></script>
 	<!-- <script src="/assets/js/site.js?1570538649"></script> -->
 
-	<script src="%PUBLIC_URL%/js/index_scripts1.js"></script>
+	<script src="%PUBLIC_URL%/js/index_scripts1.js?v=12345"></script>
 	<!-- <script src="/assets/js/index_scripts1.js?1570538649"></script> -->
-	<script src="%PUBLIC_URL%/js/index_scripts2.js"></script>
+	<script src="%PUBLIC_URL%/js/index_scripts2.js?v=12345"></script>
 	<!-- <script src="/assets/js/index_scripts2.js?1570538649"></script> -->
-	<script src="%PUBLIC_URL%/vendor/jquery.flexslider-min.js"></script>
+	<script src="%PUBLIC_URL%/vendor/jquery.flexslider-min.js?v=12345"></script>
 
 	<script>
 		$(window).load(function () {
@@ -769,7 +761,7 @@
 	</script>
 
 
-	<div class="phoneExample" style="color:#28529b; font-size:13px;">電話格式範例：0912345678 和 02-23612351</div>
+	<div class="phoneExample" style="color:#28529b; font-size:13px;">電話格式範例：0912345678 或 02-23612351</div>
 	<script>
 		$(document).ready(function () {
 			if (document.body.clientWidth < 640) {
