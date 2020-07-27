@@ -5,11 +5,11 @@
   "private": true,
   "dependencies": {
     "email-autocomplete": "^0.2.0",
-    "gpea-npm-en-uploader": "greenpeace/gpea-npm-en-uploader",
+    "gpea-npm-en-uploader": "github:greenpeace/gpea-npm-en-uploader",
     "js-email-autocomplete": "^1.0.3"
   },
   "devDependencies": {
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.4.0"

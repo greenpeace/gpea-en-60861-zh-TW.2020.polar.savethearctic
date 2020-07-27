@@ -194,7 +194,7 @@ $(function () {
     });
     setTimeout(function () {
       window.location.href = thankYouPageRedirect;
-    }, 2000);
+    }, 3000);
     // $('#page-2').show();
   }
 });
