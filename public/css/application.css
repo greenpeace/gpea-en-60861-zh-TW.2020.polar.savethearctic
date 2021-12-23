@@ -698,7 +698,24 @@ p.error {
     border-bottom-width: 0 !important;
 }
 
+.button .orangeBtn {
+    border: none;
+    background: #ff8100;
+    border-radius: 5px !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
 
+.button .orangeBtn:hover {
+    background-color: #ffb660;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.button .orangeBtn:active {
+    margin-top: 4px !important;
+    border-bottom-width: 0 !important;
+}
 
 /* line 36, /Users/lattecreative/RubymineProjects/GreenPeace-SavetheArctic/source/css/partials/_320grid.sass */
 #player.player {

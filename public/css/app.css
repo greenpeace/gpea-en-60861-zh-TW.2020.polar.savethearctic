@@ -1,4 +1,4 @@
-.en__component {
+#mc-form {
     display: none !important;
 }
 
@@ -31,6 +31,7 @@
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;
+    overflow-y: scroll;
 }
 
 #page-2 > .content > .info > p {
@@ -73,6 +74,92 @@
 #page-2 .line_btn:hover {
     background: #68d352;
 } */
+
+#submitted-error {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 26pt;    
+    z-index: 10001;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+/* full page loading */
+#page-loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 10001;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 1;
+    transition: opacity 1s;    
+}
+#page-loading.hide {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#page-loading .lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+#page-loading .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #6c0;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+#page-loading .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+#page-loading .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+#page-loading .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+#page-loading .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+    0% {transform: scale(0); }
+    100% {transform: scale(1); }
+}
+@keyframes lds-ellipsis3 {
+    0% {transform: scale(1); }
+    100% {transform: scale(0); }
+}
+@keyframes lds-ellipsis2 {
+    0% {transform: translate(0, 0); }
+    100% {transform: translate(24px, 0); }
+}
+
 @media(max-width: 767px) {
     #page-2 > .content {
         display: block;
@@ -93,4 +180,8 @@
         padding: unset;
         margin-top: 20px;
     }
+}
+
+#container6 {
+    margin-bottom: 60px;
 }
