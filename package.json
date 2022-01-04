@@ -5,7 +5,6 @@
   "private": true,
   "dependencies": {
     "email-autocomplete": "^0.2.0",
-    "gpea-npm-en-uploader": "greenpeace/gpea-npm-en-uploader",
     "js-email-autocomplete": "^1.0.3",
     "mailcheck": "^1.1.1"
   },
